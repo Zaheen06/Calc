@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: white; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    line-height: 1.6; /* Improved text readability */
+    overflow: hidden; /* Prevent scrollbars if unnecessary */
+}
+
+.container {
+    background-color: #1c1c1c; /* Darker gray for the calculator body */
+    width: 320px; /* Fixed width for a calculator look */
+    border-radius: 20px; /* Smooth but slightly sharper corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Include padding in the width and height */
+    border: 1px solid #333; /* Subtle border for refinement */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth interaction effect */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8); /* Enhanced shadow */
+}
+
+#display {
+    width: 100%; /* Full width of the container */
+    max-width: 100%; /* Prevent overflow */
+    height: 80px;
+    background-color: #222; /* Dark background for display */
+    color: white; /* White text for contrast */
+    font-size: 2.2em;
+    text-align: right;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.7); /* Inset shadow for depth */
+    box-sizing: border-box; /* Include padding in the width */
+    overflow: hidden; /* Prevent text overflow */
+    font-family: 'Courier New', monospace; /* A distinct font for display */
+    letter-spacing: 1px; /* Better readability */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+    gap: 15px; /* Space between buttons */
+    width: 100%; /* Buttons span the width of the calculator */
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282828; /* Slightly lighter dark for buttons */
+    color: #f0e130; /* Vibrant yellow */
+    border: none;
+    border-radius: 50%; /* Rounded buttons */
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Button depth */
+}
+
+button:hover {
+    background-color: #3a3a3a; /* Slightly brighter on hover */
+    transform: translateY(-5px); /* Pop-up effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+button:active {
+    transform: translateY(2px); /* Slight press effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); /* Adjust shadow on press */
+}
+
+button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px #f0e130; /* Glow effect */
+}
